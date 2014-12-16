@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'base/select'
   end
 
-  root 'admin/base#test'
+  root 'admin/base#select'
   get '/admin' => 'admin/base#index'
   get '/admin/test' => 'admin/base#test'
 
