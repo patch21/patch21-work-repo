@@ -1,0 +1,24 @@
+%div{"ng-controller" => "AdminController"}
+  {{ message('MyName') }}
+  %div{"ng-click" => "click()"}
+    test-click
+    {{1+1}}
+  %div{"ng-show" => "st.area"}
+    ho-ho-ho-
+    {{1+1}}
+  %div{"ng-hide" => "true"}
+    yo-yoyo-
+  %div{"ng-show" => "!showActions", "ng-swipe-left" => "showActions = true"}
+    show left action
+  %div{"ng-show" => "showActions", "ng-swipe-right" => "showActions = false"}
+    show right action
+  %input{:type => 'text', "ng-model" => "name"}
+    {{ "You name is " + name}}
+  %div{"ng-init" => "init()"}
+    init
+  %div.touchbody
+    %div.touchbox
+      show!
+      %span{"ng-repeat" => "a in array_i"}
+        {{dubdub(a)}}
+  = link_to "JUMP!", "admin/test"

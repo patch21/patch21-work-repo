@@ -1,0 +1,10 @@
+%h1 SELECT BOX
+
+%div.selectbox{"ng-controller" => "selectController", "ng-init" => "init()"}
+
+  %div{"ng-repeat" => "sel in selector"}
+    %div.button{"ng-click" => "click($index,$event)", "ng-class" => "{enable: selectAct($index)}"}
+      {{sel}}
+  %br
+  %div.submit{"ng-click" => "submit()"}
+    submit({{selectView()}})

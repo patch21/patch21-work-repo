@@ -1,0 +1,37 @@
+// Place all the styles related to the admin::base controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// .touchbody {
+//   height: 30px;
+//   width: 200px;
+//   overflow-x: scroll;
+//   overflow-y: hidden;
+// }
+.touchbox {
+  width: 110%;
+  height: 30px;
+  text-align: center;
+  // word-wrap: normal;
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+div.selectbox{
+  border: solid 2px white;
+}
+div.button {
+  width: 100px;
+  text-align: center;
+  border: solid 2px white;
+  &:hover {
+    border: solid 2px gray;
+    background-color: gray;
+    cursor: pointer;
+  }
+}
+
+div.enable{
+  border: solid 2px gray;
+}

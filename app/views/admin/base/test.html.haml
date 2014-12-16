@@ -1,0 +1,9 @@
+%h1
+  ANGULAR JS TEST PAGE
+%div{"ng-app" => "testApp"}
+  %div{"ng-controller" => "testController"}
+    {{mes}}
+    %ul
+      %li{'ng-repeat' => 'i in [0,1,2,3,4]'}
+        %span
+          No.{{ i }}
