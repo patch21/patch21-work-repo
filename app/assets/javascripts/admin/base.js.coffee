@@ -6,16 +6,16 @@ baseApp = angular.module("layoutApp", [
   'ngAnimate',
   'infinite-scroll'
   ])
-'use struct'
 baseApp.controller "selectController", ($scope)->
+  $scope.selector = [
+    100,
+    200,
+    300,
+    400,
+    500
+  ]
   init = ->
-    $scope.selector = [
-      100,
-      200,
-      300,
-      400,
-      500
-    ]
+    $scope.select = 0
     null
   $scope.init = init()
   $scope.click = (sel,$event)->
@@ -26,6 +26,12 @@ baseApp.controller "selectController", ($scope)->
     null
   $scope.selectAct = (index)->
     $scope.select == index
+  $scope.up = ()->
+    if $scope.select > 0
+      $scope.select -= 1
+  $scope.down  = ()->
+    if $scope.select < $scope.selector.length - 1
+      $scope.select += 1
   $scope.submit = ()->
     if $scope.select
       alert $scope.select

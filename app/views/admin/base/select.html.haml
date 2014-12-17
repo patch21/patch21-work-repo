@@ -2,9 +2,12 @@
 
 %div.selectbox{"ng-controller" => "selectController", "ng-init" => "init()"}
 
-  %div{"ng-repeat" => "sel in selector"}
-    %div.button{"ng-click" => "click($index,$event)", "ng-class" => "{enable: selectAct($index)}"}
-      {{sel}}
+  %div.x_selectbox
+    %div.up{"ng-click" => "up()"}▲
+    %div{"ng-repeat" => "sel in selector"}
+      %div.x_colum{"ng-click" => "click($index,$event)", "ng-class" => "{enable: selectAct($index)}"}
+        {{sel}}
+    %div.down{"ng-click" => "down()"}▼
   %br
-  %div.submit{"ng-click" => "submit()"}
-    submit({{selectView()}})
+  / %div.submit{"ng-click" => "submit()"}
+  /   submit({{selectView()}})

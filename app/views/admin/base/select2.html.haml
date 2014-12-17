@@ -1,0 +1,13 @@
+%h1 SELECT BOX
+
+%div.selectbox{"ng-controller" => "selectController", "ng-init" => "init()"}
+
+  %div.y_selectbox
+    %div.up{"ng-click" => "up()","style" => "float:left;width:auto;"}◀
+    %div{"ng-repeat" => "sel in selector","style" => "float:left;"}
+      %div.y_colum{"ng-click" => "click($index,$event)", "ng-class" => "{enable: selectAct($index)}"}
+        {{sel}}
+    %div.down{"ng-click" => "down()","style" => "float:left;width:auto;"}▶
+  %br
+  / %div.submit{"ng-click" => "submit()"}
+  /   submit({{selectView()}})

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :admin do
-  get 'base/select'
+    get 'base/select'
+    get 'base/select2'
   end
 
   root 'admin/base#select'

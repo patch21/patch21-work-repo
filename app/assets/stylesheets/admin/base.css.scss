@@ -8,6 +8,11 @@
 //   overflow-x: scroll;
 //   overflow-y: hidden;
 // }
+
+$ena_color: #D3D3D3;
+$dis_color: #FFF;
+$hov_color: #808080;
+
 .touchbox {
   width: 110%;
   height: 30px;
@@ -18,20 +23,54 @@
   overflow-y: hidden;
 }
 
-div.selectbox{
-  border: solid 2px white;
-}
-div.button {
+div.x_selectbox{
+  border: solid 2px $dis_color;
   width: 100px;
   text-align: center;
-  border: solid 2px white;
+}
+div.y_selectbox{
+  border: solid 2px $dis_color;
+  text-align: center;
+}
+
+div.x_colum {
+  width: 100%;
+  text-align: center;
+  border: solid 2px $dis_color;
   &:hover {
-    border: solid 2px gray;
-    background-color: gray;
+    border: solid 2px $hov_color;
+    background-color: $hov_color;
+    cursor: pointer;
+  }
+}
+
+div.y_colum {
+  text-align: center;
+  border: solid 2px $dis_color;
+  &:hover {
+    border: solid 2px $hov_color;
+    background-color: $hov_color;
     cursor: pointer;
   }
 }
 
 div.enable{
-  border: solid 2px gray;
+  border: solid 2px $ena_color;
+  background-color: $ena_color;
 }
+
+.up,
+.down,
+.left,
+.right{
+  margin: 0 auto;
+  width: 100%;
+  border: solid 4px $dis_color;
+  font-size: 15px;
+  &:hover {
+    border: solid 4px $hov_color;
+    background-color: $hov_color;
+    cursor: pointer;
+  }
+}
+
